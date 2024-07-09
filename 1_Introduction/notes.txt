@@ -1,0 +1,29 @@
+Langchain is an open-source framework that equips developers 
+with the necessary tools to create applications powered by
+large language models (LLMs)
+
+Why do we need Langchain?
+    - Most of the LLMs are not up to date
+    - They are not good at domain knowlegde and fail when
+    working with Proprietary data
+    - Working with different LLMs may become a tedious task
+
+Langchain Benefits:
+    - Data-Aware:
+        - Langchain enables you to link your LLM to other data
+        sources including file systems, databases, and APIs
+        - As opposed to those that merely reach out to an LLM
+        via an API, it is now possible to create apps that are
+        more robust and creative
+    - Agentic:
+        - Langchain enables you to create agents that employ 
+        LLMs to decide what to do and how to do it
+        - As a result, it is now possible to create 
+        applications that can communicate more effectively
+        with the environment
+    - Chains:
+        - You can chain togather several calls to an LLM or
+        other utilities using Langchain
+        - This enables the development of more advanced 
+        projects that are capable of handling many different
+        tasks

@@ -1,0 +1,14 @@
+OpenAI Products and Services:
+    - GPT-3
+    - ChatGPT
+    - Codex
+    - Dall-e
+    - OpenAI API
+    - Whisper
+
+OpenAI Use Cases:
+    - Customer Support & Virtual Assistants
+    - Content Creation and Copywriting
+    - Programming and Code Generation
+    - Content Moderation
+    - Personalized Recommendation

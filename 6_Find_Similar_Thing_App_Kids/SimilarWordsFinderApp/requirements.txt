@@ -1,0 +1,8 @@
+langchain
+streamlit
+openai
+tiktoken
+python-dotenv
+faiss-cpu
+langchain-community
+openpyxl

@@ -1,5 +1,10 @@
 Prompt Templates
 
-Example Selectors
+Example Selectors:
+    - They are tools that take user input and provide a list of relevant examples
+    to enhance prompt construction
+    - The FewShotPromptTemplate enables the inclusion of a few examples within 
+    prompts, which the model can read and use to apply to user input, enhancing 
+    the model's ability to handle specific tasks or scenarios.
 
 Output Parsers

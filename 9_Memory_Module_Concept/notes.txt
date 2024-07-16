@@ -7,5 +7,9 @@ Types of Memories Available in Langchain:
     - ConversationKnowledgeGraphMemory
     - ConversationSummaryMemory
     - ConversationSummaryBufferMemory
-    - ConversationTokenBufferMemory
+    - ConversationTokenBufferMemory:
+        - Unlike other methods that rely on the number of interactions, this memory
+        system determines when to clear or flush interactions based on the length of
+        tokens used
+        - Buffer is cleared when the token count exceeds a certain threshold
     - VectorStore-BackedMemory

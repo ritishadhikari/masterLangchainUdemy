@@ -1,0 +1,11 @@
+Conversational Chatbots are Stateless and don't carry memory by default.
+
+Types of Memories Available in Langchain:
+    - ConversationalBufferMemory
+    - ConversationalBufferWindowMemory
+    - EntityMemory
+    - ConversationKnowledgeGraphMemory
+    - ConversationSummaryMemory
+    - ConversationSummaryBufferMemory
+    - ConversationTokenBufferMemory
+    - VectorStore-BackedMemory

@@ -22,3 +22,7 @@ def splitData(docs):
     )
     docsChunks=textSplitter.split_documents(documents=docs)
     return docsChunks
+
+def createEmbeddings():
+    embeddings=SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2")
+    return embeddings

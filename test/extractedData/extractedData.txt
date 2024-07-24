@@ -1,0 +1,20 @@
+Domain Knowledge
+Edge model
+Emotion AI (aka Affective Computing)
+Environmental, Social, and Governance (ESG)
+ETL (Entity Recognition, Extraction)
+Explainable AI/Explainability
+Learn more
+Extraction or Keyphrase Extraction
+Extractive Summarization
+Also see Generative Summarization
+F-score (F-measure, F1 measure)
+Few-shot learning
+Fine-tuned model
+Foundational model
+Generalized model
+Generative AI (GenAI)
+Generative Summarization
+Hybrid AI
+Inference Engine
+Insight Engine

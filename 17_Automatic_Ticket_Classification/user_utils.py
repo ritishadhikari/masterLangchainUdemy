@@ -1,11 +1,12 @@
 import pinecone
-from langchain.vectorstores import Pinecone
-from langchain.embeddings import SentenceTransformerEmbeddings
+from langchain_community.vectorstores import Pinecone
+from langchain_community.embeddings import SentenceTransformerEmbeddings
 from langchain_openai import OpenAI
 from langchain.chains.question_answering import load_qa_chain
 from langchain.chains import RetrievalQA
 from langchain.callbacks import get_openai_callback
 from langchain_google_genai import GoogleGenerativeAI
+import joblib
 
 
 def pullFromPineCone(pineconeIndexName,
@@ -44,3 +45,9 @@ def getAnswer(userInput,retriever):
     response=chain.invoke(
                 {'query':userInput})['result']
     return response
+
+
+def predict(queryResult):
+    fitModel=joblib.load(filename="modelSVM.pkl")
+    result=fitModel.predict([queryResult])[0]
+    return result

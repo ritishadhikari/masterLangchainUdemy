@@ -4,7 +4,9 @@ from langchain_openai.embeddings import OpenAIEmbeddings
 from langchain.embeddings import SentenceTransformerEmbeddings
 from langchain_openai import OpenAI
 import pinecone
-from langchain.vectorstores import Pinecone
+from langchain_community.vectorstores import Pinecone
+import pandas as pd
+from sklearn.model_selection import train_test_split
 
 def readPDFData(pdf_file):
     pdf_page=PdfReader(stream=pdf_file)
@@ -60,3 +62,24 @@ def pullFromPineCone(pineconeIndexName,
         embedding=embeddings
     )
     return vectorStore
+
+#### Functions for dealing with Model Related Tasks ####
+def readData(data):
+    df=pd.read_csv(filepath_or_buffer=data, 
+                   delimiter=",",
+                   header=None)
+    return df
+
+def createEmbeddings(df:pd.DataFrame,embeddings):
+    df[2]=df[0].apply(lambda c: embeddings.embed_query(c))
+    return df
+
+def splitTrainTestData(data):
+    sentTrain,sentTest, labTrain,labTest=train_test_split(
+        list(data[2]), list(data[1]), test_size=0.25, random_state=34
+    )
+    return sentTrain,sentTest,labTrain,labTest
+
+def getScore(svmClassifier, sentTest, labTest):
+    score=svmClassifier.score(sentTest,labTest)
+    return score

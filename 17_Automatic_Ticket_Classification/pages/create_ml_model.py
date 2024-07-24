@@ -1,5 +1,5 @@
 import streamlit as st
-import admin_utils
+from pages import admin_utils
 from sklearn.svm import SVC
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler

@@ -51,17 +51,17 @@ def main():
             # Get Response
             embeddings=user_utils.createEmbeddingsLoadData()
             queryResult=embeddings.embed_query(text=userInput)
-            departmentValue=user_utils.predict(queryResult=queryResult)
-            departmentValue=f"Ticket submitted to {departmentValue} Department"
-            print(departmentValue)
+            result=user_utils.predict(queryResult=queryResult)
+            departmentValue=f"Ticket submitted to {result} Department"
             st.write(departmentValue)
             
-            if departmentValue=="HR": 
+            if result=="HR": 
                 st.session_state["HR_tickets"].append(userInput)
-            if departmentValue=="IT": 
+            if result=="IT": 
                 st.session_state["IT_tickets"].append(userInput)
-            if departmentValue=="Transport": 
+            if result=="Transportation": 
                 st.session_state["Transport_tickets"].append(userInput)
+                
 
 
 if __name__=="__main__":

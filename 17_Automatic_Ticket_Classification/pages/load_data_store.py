@@ -1,6 +1,8 @@
 import streamlit as st
 from dotenv import load_dotenv,find_dotenv
-import admin_constants,admin_utils
+from pages import admin_constants
+from pages import admin_utils
+
 def main():
     load_dotenv()
 

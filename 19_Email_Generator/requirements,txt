@@ -1,0 +1,7 @@
+sentence-transformers==2.5.1
+uvicorn==0.24.0.post1
+ctransformers==0.2.27
+fastapi==0.110.0
+ipykernel==6.27.1
+langchain==0.1.13
+python-box==7.1.1

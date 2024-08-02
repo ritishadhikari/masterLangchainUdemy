@@ -34,11 +34,11 @@ def loadAnswer(question):
     return assistantAnswer.content
 
 def getText():
-    inputText=st.text_input("You: ")
+    inputText=st.text_input(label="You: ")
     return inputText
 
 userInput=getText()
-submit=st.button("Generate")
+submit=st.button(label="Generate")
 
 if submit:
     response=loadAnswer(question=userInput)

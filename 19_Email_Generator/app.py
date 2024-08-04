@@ -5,7 +5,8 @@ from dotenv import load_dotenv, find_dotenv
 
 load_dotenv(find_dotenv())
 
-def getLLMResponse(formInput,emailSender,emailRecipient,emailStyle,startDate,endDate,backup):
+def getLLMResponse(formInput,emailSender,emailRecipient,emailStyle,
+                   startDate,endDate,backup):
     llm=GoogleGenerativeAI(model="gemini-1.5-pro-latest")
 
     template="""

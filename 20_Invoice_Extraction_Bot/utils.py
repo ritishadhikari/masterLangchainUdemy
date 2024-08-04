@@ -26,27 +26,27 @@ def extractedData(pagesData):
         template=template
     ).format(pages=pagesData)
 
-    # llm=GoogleGenerativeAI(model="gemini-1.5-pro-latest",temperature=0.7)
+    llm=GoogleGenerativeAI(model="gemini-1.5-pro-latest",temperature=0.7)
 
-    # fullResponse=llm.invoke(
-    #     input=promptTemplate
-    # )
+    fullResponse=llm.invoke(
+        input=promptTemplate
+    )
    
-    input = {
-    "top_p": 0.9,
-    "prompt": promptTemplate,
-    "temperature": 0.75,
-    "max_new_tokens": 800,
-    "max_length": 512,
-    "repeatation_penalty":1
-    }
+    # input = {
+    # "top_p": 0.9,
+    # "prompt": promptTemplate,
+    # "temperature": 0.75,
+    # "max_new_tokens": 800,
+    # "max_length": 512,
+    # "repeatation_penalty":1
+    # }
 
-    fullResponse=""
-    for event in replicate.stream(
-        ref="meta/llama-2-7b-chat:r8_EPOIbynEWRnVFGOT7PYSBbtyMqnjtQm0pJQuL",
-        input=input,
-    ):
-        fullResponse+=event
+    # fullResponse=""
+    # for event in replicate.stream(
+    #     ref="meta/llama-2-7b-chat:r8_EPOIbynEWRnVFGOT7PYSBbtyMqnjtQm0pJQuL",
+    #     input=input,
+    # ):
+    #     fullResponse+=event
 
     return fullResponse
 
